@@ -14,15 +14,20 @@
         }
 
         body {
-            background: linear-gradient(145deg, #ffdde1 0%, #f9c9d1 100%);
-            font-family: 'Quicksand', 'Segoe UI', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.8rem;
-            position: relative;
-            overflow-x: hidden;
+    background: linear-gradient(145deg, #ffdde1 0%, #f9c9d1 100%); /* Remove or keep as fallback */
+    background-image: url('back.jpg'); /* Add your image */
+    background-size: cover; /* Makes image cover entire screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps image fixed when scrolling */
+    font-family: 'Quicksand', 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.8rem;
+    position: relative;
+    overflow-x: hidden;
         }
 
         /* floating hearts backdrop */
@@ -56,22 +61,22 @@
         }
 
         /* main card – like a treasured letter */
-        .page-card {
-            background: rgba(255, 250, 245, 0.8);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border-radius: 48px 24px 56px 24px;
-            box-shadow: 0 30px 45px -15px rgba(180, 60, 80, 0.3),
-                        0 0 0 2px rgba(255, 200, 200, 0.6) inset,
-                        0 0 0 5px rgba(255, 240, 240, 0.5) inset;
-            max-width: 950px;
-            width: 100%;
-            padding: 2.2rem 2rem;
-            position: relative;
-            z-index: 20;
-            transition: all 0.3s;
-            border: 1px solid #ffc0cb;
-        }
+.page-card {
+    background: rgba(255, 250, 245, 0.4); /* Changed from 0.8 to 0.4 - much more transparent */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 48px 24px 56px 24px;
+    box-shadow: 0 30px 45px -15px rgba(180, 60, 80, 0.3),
+                0 0 0 2px rgba(255, 200, 200, 0.6) inset,
+                0 0 0 5px rgba(255, 240, 240, 0.5) inset;
+    max-width: 950px;
+    width: 100%;
+    padding: 2.2rem 2rem;
+    position: relative;
+    z-index: 0;
+    transition: all 0.3s;
+    border: 1px solid #ffc0cb;
+}
 
         /* page navigation (invisible, becomes visible) */
         .next-btn, .end-btn {
@@ -398,17 +403,17 @@
             <h2 style="color:#b04150; font-size:2rem; text-align:center;">Your favorites</h2>
             <div class="fav-grid">
                 <div class="fav-item">
-                    <img src="Image/Tulip.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;">
+                    <img src="Tulip.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;">
                     <div class="fav-title">white tulip</div>
                     <div class="fav-desc">pure like your heart, every petal whispers your name. you bloom in my life endlessly.</div>
                 </div>
                 <div class="fav-item">
-                    <img src="Image/Dessert.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;">
+                    <img src="Dessert.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;">
                     <div class="fav-title">cake · ice · waffle</div>
                     <div class="fav-desc">sweet as your laughter, cold as the ice we share, warm as waffle mornings with you.</div>
                 </div>
                 <div class="fav-item">
-                   <img src="Image/destiny.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;">
+                   <img src="destiny.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;">
                     <div class="fav-title">France, Newland, Swaziland, Korea</div>
                     <div class="fav-desc">France: city of love. Newland: our undiscovered world. Swaziland: royal heart. Korea: autumn leaves with you. someday, we'll walk there.</div>
                 </div>
@@ -435,119 +440,120 @@
             <h2 style="color:#b04150; font-size:2rem; text-align:center;">our memories </h2>
             <div class="memory-pics">
                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo29.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">27 Aug 2025 – you said yes</div>
+                    <div class="memory-img"><img src="Photo29.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+                    <div class="memory-caption">27 Aug 2025 – First Date</div>
                 </div>
                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo27.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">22 Sep 2025 – your confession</div>
+                    <div class="memory-img"><img src="Photo27.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+
                 </div>
                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo28.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">New year 2026 – starlit night</div>
+                    <div class="memory-img"><img src="Photo28.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+
                 </div>
                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo26.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+                    <div class="memory-img"><img src="Photo26.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+                    <div class="memory-caption">Bishan, First Kiss</div>
                 </div>
                                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo25.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">27 Aug 2025 – you said yes</div>
+                    <div class="memory-img"><img src="Photo25.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+                    <div class="memory-caption">harbourfront My Birthday date</div>
                 </div>
                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo24.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">22 Sep 2025 – your confession</div>
+                    <div class="memory-img"><img src="Photo24.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+
                 </div>
                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo22.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">New year 2026 – starlit night</div>
+                    <div class="memory-img"><img src="Photo22.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+
                 </div>
                 <div class="memory-frame">
-<div class="memory-img"><img src="Image/Photo23.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">rainy days, coffee & us</div>
+<div class="memory-img"><img src="Photo23.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+
                 </div>
                                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo21.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">27 Aug 2025 – you said yes</div>
+                    <div class="memory-img"><img src="Photo21.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+                    <div class="memory-caption">Movie - Zootopia 2</div>
                 </div>
                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo18.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">22 Sep 2025 – your confession</div>
+                    <div class="memory-img"><img src="Photo18.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+                    <div class="memory-caption">Booth Photo</div>
                 </div>
                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo19.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">New year 2026 – starlit night</div>
+                    <div class="memory-img"><img src="Photo19.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+
                 </div>
                 <div class="memory-frame">
-<div class="memory-img"><img src="Image/Photo17.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">rainy days, coffee & us</div>
+<div class="memory-img"><img src="Photo17.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+                    <div class="memory-caption">Birday Celebration</div>
                 </div>
                                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo16.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">22 Sep 2025 – your confession</div>
+                    <div class="memory-img"><img src="Photo16.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+
                 </div>
                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo15.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+                    <div class="memory-img"><img src="Photo15.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+                    
+                </div>
+                <div class="memory-frame">
+<div class="memory-img"><img src="Photo13.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
                     <div class="memory-caption">New year 2026 – starlit night</div>
                 </div>
-                <div class="memory-frame">
-<div class="memory-img"><img src="Image/Photo13.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">rainy days, coffee & us</div>
-                </div>
                                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo14.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">27 Aug 2025 – you said yes</div>
+                    <div class="memory-img"><img src="Photo14.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+
                 </div>
                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo11.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">22 Sep 2025 – your confession</div>
+                    <div class="memory-img"><img src="Photo11.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+                    
                 </div>
                                                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo5.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">27 Aug 2025 – you said yes</div>
+                    <div class="memory-img"><img src="Photo5.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+
                 </div>
                                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo12.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">New year 2026 – starlit night</div>
+                    <div class="memory-img"><img src="Photo12.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+                    
                 </div>
                 
                 <div class="memory-frame">
-                   <div class="memory-img"><img src="Image/Photo4.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">22 Sep 2025 – your confession</div>
+                   <div class="memory-img"><img src="Photo4.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+                    <div class="memory-caption">Rowdy baby with saree</div>
                 </div>
                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo8.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">New year 2026 – starlit night</div>
+                    <div class="memory-img"><img src="Photo8.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+                    <div class="memory-caption">Fun and Joy</div>
                 </div>
                 
                 <div class="memory-frame">
-<div class="memory-img"><img src="Image/Photo9.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">rainy days, coffee & us</div>
+<div class="memory-img"><img src="Photo9.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+
                 </div>
 
                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo3.jpg" alt="27 Aug 2025"  style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">New year 2026 – starlit night</div>
+                    <div class="memory-img"><img src="Photo3.jpg" alt="27 Aug 2025"  style="width:100%; border-radius:16px;"></div>
+                   
                 </div>
                 
                 <div class="memory-frame">
-<div class="memory-img"><img src="Image/Photo6.1.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">rainy days, coffee & us</div>
+<div class="memory-img"><img src="Photo6.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+                    <div class="memory-caption">Rose Day</div>
                 </div>
                                                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo7.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">27 Aug 2025 – you said yes</div>
+                    <div class="memory-img"><img src="Photo7.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+
                 </div>
                 <div class="memory-frame">
-                   <div class="memory-img"><img src="Image/Photo1.jpg"  alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">22 Sep 2025 – your confession</div>
+                   <div class="memory-img"><img src="Photo1.jpg"  alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+
                 </div>
                 <div class="memory-frame">
-                    <div class="memory-img"><img src="Image/Photo2.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">New year 2026 – starlit night</div>
+                    <div class="memory-img"><img src="Photo2.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+                    
                 </div>
                 <div class="memory-frame">
-<div class="memory-img"><img src="Image/Photo.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
-                    <div class="memory-caption">rainy days, coffee & us</div>
+<div class="memory-img"><img src="Photo.jpg" alt="27 Aug 2025" style="width:100%; border-radius:16px;"></div>
+
                 </div>
             </div>
             <div style="text-align:center; color:#7c3841;">📸 every picture a love story. more frames to fill, with you.</div>
@@ -558,12 +564,12 @@
 
         <!-- PAGE 4 : VIDEO & END BUTTON (brings back to home) -->
         <div id="page4" class="page">
-            <h2 style="color:#b04150; font-size:2.1rem; text-align:center;">a message for my valentine 🎥</h2>
+            <h2 style="color:#b04150; font-size:2.1rem; text-align:center;">This Video for my valentine 🎥</h2>
             <div class="video-section">
                 <div class="video-box">
                     <div class="video-placeholder" id="videoPlayer">
                             <video id="myVideo" width="100%" controls style="border-radius:24px;">
-        <source src="Vid/Val.MOV" type="video/mp4">
+        <source src="Val.mp4" type="video/mp4">
         Your browser doesn't support video.
     </video>
                     </div>
@@ -571,7 +577,7 @@
                 <div>
                     <button id="playVideoBtn" class="video-btn">🎬 play our story</button>
                 </div>
-                <p style="font-size:1.2rem; color:#972e3f;">என் காதல், un video message kettu en heart full happy ❤️</p>
+                <p style="font-size:1.2rem; color:#972e3f;">4 month நாம் காதல் Journey ❤️</p>
             </div>
             <div class="nav-container" id="endBtnContainer">
                 <button class="end-btn" id="endBtn">🏠 END · back to home 🏠</button>
@@ -673,7 +679,7 @@
 
             playBtn.addEventListener('click', function() {
                 // simulate video play - change content to moving message
-                videoDiv.innerHTML = '🎥✨ "Nairukken Pathukkalam, pattukky ... neenga en vasam, ungalukku en anbu. Happy Valentine\'s day, pondati." ✨🎥';
+                videoDiv.innerHTML = 'Ellaa kashtathaiyum namma serndhu paathukalaam. Neenga en vasam, ungalukku en anbu—eppavum, ella naalum. Happy Valentine’s Day, en pondatti.” 💖';
                 videoDiv.style.background = "#331116";
                 videoDiv.style.color = "#ffe2ec";
                 videoDiv.style.fontSize = "1.5rem";
