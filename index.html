@@ -76,6 +76,11 @@
     z-index: 0;
     transition: all 0.3s;
     border: 1px solid #ffc0cb;
+        overflow-y: auto; /* Allows scrolling within card */
+    max-height: 90vh;
+}
+.page.active-page {
+    scroll-behavior: smooth;
 }
 
         /* page navigation (invisible, becomes visible) */
@@ -600,10 +605,24 @@
                 4: document.getElementById('page4')
             };
 
-            function showPage(pageId) {
-                Object.values(pages).forEach(p => p.classList.remove('active-page'));
-                pages[pageId].classList.add('active-page');
-            }
+function showPage(pageId) {
+    Object.values(pages).forEach(p => p.classList.remove('active-page'));
+    pages[pageId].classList.add('active-page');
+    
+    // SCROLL TO TOP WHEN PAGE CHANGES
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // smooth scrolling animation
+    });
+    
+    // Also scroll the main container
+    document.querySelector('.page-card').scrollTop = 0;
+    
+    // For mobile browsers - additional scroll
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 100);
+}
 
             // ---------- HOME PAGE (0) : YES BUTTON / ESCAPE NO BUTTON ----------
             const yesBtn0 = document.getElementById('yesBtn0');
